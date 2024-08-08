@@ -1,89 +1,125 @@
-.phonebook {
-  background-color: #f4f4f4;
-  color: #333;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
   font-family: "Arial", sans-serif;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
+  color: #333; /* Тёмно-серый для текста */
+  background-color: #f4f4f4; /* Светло-серый фон */
+}
+
+a {
+  text-decoration: none;
+  color: #333; /* Тёмно-серый для ссылок */
 }
 
 .container {
-  background-color: #fff;
-  border-radius: 8px;
-  padding: 20px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  max-width: 800px;
-  width: 100%;
-}
-
-.title {
-  color: #333;
-  font-size: 2rem;
-  margin-bottom: 20px;
-  text-align: center;
-}
-
-.phonebookContentWrap {
-  display: flex;
-  gap: 20px;
-  flex-direction: row;
-}
-
-.containerCol {
-  flex: 1;
-  margin-left: 10px;
-}
-
-.phonebookContactsWrap {
-  background-color: #f9f9f9;
-  border-radius: 8px;
+  max-width: 1200px;
+  margin: 0 auto;
   padding: 20px;
 }
-
-.isDisabled {
-  background-color: #ccc;
-  cursor: not-allowed;
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: normal;
+  color: #000; /* Черный цвет для заголовков */
 }
 
+p {
+  line-height: 1.6;
+  margin-bottom: 15px;
+}
+
+strong {
+  font-weight: bold;
+  color: #000; /* Черный цвет для выделенного текста */
+}
 button {
-  background-color: #333;
-  color: #fff;
+  background-color: #000; /* Черный фон */
+  color: #fff; /* Белый текст */
   border: none;
   border-radius: 4px;
   padding: 10px 20px;
-  font-size: 1rem;
+  font-size: 16px;
   cursor: pointer;
-  transition: background-color 0.3s;
+  transition: background-color 0.3s ease;
 }
 
 button:hover {
-  background-color: #444;
+  background-color: #333; /* Темно-серый при наведении */
 }
-
-button:disabled {
-  background-color: #ccc;
-}
-
-.inputField {
-  background-color: #fff;
-  color: #333;
-  border: 1px solid #ccc;
+input,
+textarea {
+  border: 1px solid #ccc; /* Светло-серый бордер */
   border-radius: 4px;
   padding: 10px;
-  font-size: 1rem;
+  font-size: 16px;
   width: 100%;
-  margin-bottom: 10px;
+  margin-bottom: 15px;
+  background-color: #fff; /* Белый фон для полей */
 }
 
-.errorMessage {
-  color: #e53935;
-  font-size: 0.875rem;
+input:focus,
+textarea:focus {
+  border-color: #000; /* Черный бордер при фокусе */
+  outline: none;
 }
 
-.contactList {
-  list-style-type: none;
-  padding: 0;
-  margin: 0;
+label {
+  display: block;
+  margin-bottom: 5px;
+  color: #666; /* Средне-серый цвет для лейблов */
+}
+.card {
+  background-color: #fff; /* Белый фон карточки */
+  border: 1px solid #ddd; /* Светло-серый бордер */
+  border-radius: 4px;
+  padding: 20px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px;
+}
+
+.card-header {
+  /* Светло-серый бордер снизу */
+  padding-bottom: 10px;
+  margin-bottom: 15px;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.card-body {
+  color: #333; /* Тёмно-серый текст */
+}
+nav {
+  background-color: #fff; /* Белый фон для навигации */
+
+  padding: 10px 0;
+}
+
+nav a {
+  color: #333; /* Тёмно-серый цвет ссылок */
+  margin-right: 15px;
+}
+
+nav a:hover {
+  color: #000; /* Черный цвет при наведении */
+}
+footer {
+  background-color: #333; /* Тёмно-серый фон футера */
+  color: #fff; /* Белый текст */
+  padding: 20px;
+  text-align: center;
+}
+
+footer a {
+  color: #fff; /* Белый цвет для ссылок в футере */
+}
+
+footer a:hover {
+  color: #ccc; /* Светло-серый при наведении */
 }

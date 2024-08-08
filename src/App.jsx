@@ -1,36 +1,30 @@
-// import css from "./App.module.css";
-// import ContactForm from "./components/ContactForm/ContactForm";
-// import SearchBox from "./components/SearchBox/SearchBox";
-// import ContactList from "./components/ContactList/ContactList";
-// import { useEffect } from "react";
-// import { useDispatch } from "react-redux";
-// import { fetchContacts } from "./redux/contacts/contactsOps";
+import { lazy, Suspense } from "react";
+import { Route, Routes } from "react-router-dom";
+import Layout from "./components/Layout/Layout";
+import css from "./App.module.css";
 
-// export default function App() {
-//   const dispatch = useDispatch();
+const HomePage = lazy(() => import("./components/pages/HomePage/HomePage"));
+const RegistrationPage = lazy(() =>
+  import("./components/pages/RegistrationPage/RegistrationPage")
+);
+const LoginPage = lazy(() => import("./components/pages/LoginPage/LoginPage"));
+const ContactsPage = lazy(() =>
+  import("./components/pages/ContactsPage/ContactsPage")
+);
 
-//   useEffect(() => {
-//     dispatch(fetchContacts());
-//   }, [dispatch]);
-
-//   return (
-//     <div className={css.phonebook}>
-//       <div className={css.container}>
-//         <h1 className={css.title}>Phonebook</h1>
-//         <div className={css.phonebookContentWrap}>
-//           <div className={css.containerCol}>
-//             <ContactForm />
-//           </div>
-//           <div className={css.containerCol}>
-//             <div className={css.phonebookContactsWrap}>
-//               <SearchBox />
-//               <ContactList />
-//             </div>
-//           </div>
-//         </div>
-//       </div>
-//     </div>
-//   );
-// }
-
-export default function App() {}
+export default function App() {
+  return (
+    <div className={css.container}>
+      <Layout>
+        <Suspense fallback={null}>
+          <Routes>
+            <Route path="/" element={<HomePage />} />
+            <Route path="/register" element={<RegistrationPage />} />
+            <Route path="/login" element={<LoginPage />} />
+            <Route path="/contact" element={<ContactsPage />} />
+          </Routes>
+        </Suspense>
+      </Layout>
+    </div>
+  );
+}

@@ -1,0 +1,26 @@
+.navigationWrapper {
+  display: flex;
+  align-items: center;
+}
+
+.navigationWrapper > * {
+  margin-right: 20px;
+}
+
+.navigationWrapper > *:last-child {
+  margin-right: 0;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between; /* Располагает элементы по краям */
+  align-items: center;
+  padding: 10px 20px;
+  background-color: #fff; /* Белый фон */
+  border-bottom: 1px solid #e0e0e0; /* Светло-серый бордер */
+}
+
+.authSection {
+  display: flex;
+  align-items: center;
+}

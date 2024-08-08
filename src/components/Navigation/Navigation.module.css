@@ -1,0 +1,19 @@
+.navigation {
+  display: flex;
+  align-items: center;
+}
+
+.NavLink {
+  color: #333; /* Тёмно-серый цвет текста */
+  text-decoration: none;
+  margin-right: 20px; /* Расстояние между ссылками */
+  font-size: 16px;
+  transition: color 0.3s ease, border-bottom 0.3s ease;
+  padding-bottom: 5px;
+  border-bottom: 2px solid transparent; /* Подчёркивание по умолчанию */
+}
+
+.NavLink:hover {
+  color: #000; /* Черный цвет текста при наведении */
+  border-bottom: 2px solid #000; /* Черное подчёркивание при наведении */
+}

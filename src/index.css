@@ -1,68 +1,130 @@
-:root {
-  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
-  line-height: 1.5;
-  font-weight: 400;
-
-  color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
-
-  font-synthesis: none;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-
-a {
-  font-weight: 500;
-  color: #646cff;
-  text-decoration: inherit;
-}
-a:hover {
-  color: #535bf2;
+/* Сброс стилей для единообразия */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 body {
-  margin: 0;
-  display: flex;
-  place-items: center;
-  min-width: 320px;
-  min-height: 100vh;
+  font-family: "Arial", sans-serif;
+  color: #333; /* Тёмно-серый для текста */
+  background-color: #f4f4f4; /* Светло-серый фон */
 }
 
-h1 {
-  font-size: 3.2em;
-  line-height: 1.1;
+a {
+  text-decoration: none;
+  color: #333; /* Тёмно-серый для ссылок */
 }
 
+a:hover {
+  color: #000; /* Черный цвет при наведении */
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: normal;
+  color: #000; /* Черный цвет для заголовков */
+}
+
+p {
+  line-height: 1.6;
+  margin-bottom: 15px;
+}
+
+strong {
+  font-weight: bold;
+  color: #000; /* Черный цвет для выделенного текста */
+}
 button {
-  border-radius: 8px;
-  border: 1px solid transparent;
-  padding: 0.6em 1.2em;
-  font-size: 1em;
-  font-weight: 500;
-  font-family: inherit;
-  background-color: #1a1a1a;
+  background-color: #000; /* Черный фон */
+  color: #fff; /* Белый текст */
+  border: none;
+  border-radius: 4px;
+  padding: 10px 20px;
+  font-size: 16px;
   cursor: pointer;
-  transition: border-color 0.25s;
-}
-button:hover {
-  border-color: #646cff;
-}
-button:focus,
-button:focus-visible {
-  outline: 4px auto -webkit-focus-ring-color;
+  transition: background-color 0.3s ease;
 }
 
-@media (prefers-color-scheme: light) {
-  :root {
-    color: #213547;
-    background-color: #ffffff;
-  }
-  a:hover {
-    color: #747bff;
-  }
-  button {
-    background-color: #f9f9f9;
-  }
+button:hover {
+  background-color: #333; /* Темно-серый при наведении */
+}
+input,
+textarea {
+  border: 1px solid #ccc; /* Светло-серый бордер */
+  border-radius: 4px;
+  padding: 10px;
+  font-size: 16px;
+  width: 100%;
+  margin-bottom: 15px;
+  background-color: #fff; /* Белый фон для полей */
+}
+
+input:focus,
+textarea:focus {
+  border-color: #000; /* Черный бордер при фокусе */
+  outline: none;
+}
+
+label {
+  display: block;
+  margin-bottom: 5px;
+  color: #666; /* Средне-серый цвет для лейблов */
+}
+.card {
+  background-color: #fff; /* Белый фон карточки */
+  border: 1px solid #ddd; /* Светло-серый бордер */
+  border-radius: 4px;
+  padding: 20px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px;
+}
+
+.card-header {
+  border-bottom: 1px solid #ddd; /* Светло-серый бордер снизу */
+  padding-bottom: 10px;
+  margin-bottom: 15px;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.card-body {
+  color: #333; /* Тёмно-серый текст */
+}
+nav {
+  background-color: #fff; /* Белый фон для навигации */
+  border-bottom: 1px solid #ddd; /* Светло-серый бордер снизу */
+  padding: 10px 0;
+}
+
+nav a {
+  color: #333; /* Тёмно-серый цвет ссылок */
+  margin-right: 15px;
+}
+
+nav a:hover {
+  color: #000; /* Черный цвет при наведении */
+}
+footer {
+  background-color: #333; /* Тёмно-серый фон футера */
+  color: #fff; /* Белый текст */
+  padding: 20px;
+  text-align: center;
+}
+
+footer a {
+  color: #fff; /* Белый цвет для ссылок в футере */
+}
+
+footer a:hover {
+  color: #ccc; /* Светло-серый при наведении */
 }
