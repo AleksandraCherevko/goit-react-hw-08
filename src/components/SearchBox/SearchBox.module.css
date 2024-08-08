@@ -1,0 +1,16 @@
+.searchBoxLabel {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 15px;
+}
+
+.searchBoxInput {
+  background-color: #fff;
+  color: #333;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  padding: 10px;
+  font-size: 1rem;
+  width: 93%;
+  margin-top: 5px;
+}
