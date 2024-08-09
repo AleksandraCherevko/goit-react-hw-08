@@ -9,7 +9,7 @@ const validationSchema = Yup.object().shape({
   password: Yup.string()
     .min(6, "Password too short!")
     .max(50, "Password too long!")
-    .required("Required"),
+    .required("Required!"),
 });
 
 export default function LoginForm() {

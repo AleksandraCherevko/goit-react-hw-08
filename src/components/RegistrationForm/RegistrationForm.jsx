@@ -9,12 +9,12 @@ const validationSchema = Yup.object().shape({
   name: Yup.string()
     .min(3, "Username too short!")
     .max(50, "Username too long!")
-    .required("Required"),
+    .required("Required!"),
   email: Yup.string().email("Invalid email address").required("Required"),
   password: Yup.string()
     .min(6, "Password too short!")
     .max(50, "Password too long!")
-    .required("Required"),
+    .required("Required!"),
 });
 
 export default function RegistrationForm() {
