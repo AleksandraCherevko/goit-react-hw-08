@@ -1,0 +1,32 @@
+.userMenu {
+  display: flex; /* Использование Flexbox для горизонтального расположения */
+  align-items: center; /* Вертикальное выравнивание по центру */
+  gap: 15px; /* Расстояние между элементами */
+}
+
+.welcomeText {
+  font-family: "Arial", sans-serif; /* Современный шрифт */
+  font-size: 16px; /* Размер шрифта */
+  color: #333; /* Темно-серый цвет */
+  margin: 0; /* Удаление отступов по умолчанию */
+}
+
+.logoutButton {
+  font-family: "Arial", sans-serif; /* Современный шрифт */
+  font-size: 14px; /* Размер шрифта для кнопки */
+  color: #fff; /* Белый цвет текста */
+  background-color: #333; /* Темно-серый фон кнопки */
+  border: none; /* Удаление бордера по умолчанию */
+  padding: 8px 16px; /* Паддинги для кнопки */
+  border-radius: 4px; /* Закругление углов кнопки */
+  cursor: pointer; /* Курсор для кнопки */
+  transition: background-color 0.3s; /* Плавный переход цвета фона при наведении */
+}
+
+.logoutButton:hover {
+  background-color: #555; /* Светлее цвет фона при наведении */
+}
+
+.error {
+  color: red;
+}

@@ -18,3 +18,6 @@ export default function Navigation() {
     </nav>
   );
 }
+
+
+// если залогинен, видно контакті, велком и кнопку логаута. 

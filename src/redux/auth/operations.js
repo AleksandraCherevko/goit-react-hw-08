@@ -6,6 +6,8 @@ const setAuthHeader = (token) => {
 
 axios.defaults.baseURL = "https://connections-api.goit.global/";
 
+// POST запит для регистрации
+
 export const register = createAsyncThunk(
   "auth/register",
   async (newUser, thunkAPI) => {

@@ -14,9 +14,9 @@ export default function AppBar() {
         <Navigation />
       </div>
       <div className={css.authSection}>
-        {isLoggedIn ? <UserMenu /> : <AuthNav />} 
-        
+        {isLoggedIn ? <UserMenu /> : <AuthNav />}
       </div>
     </header>
   );
 }
+// если залогинен, видно контакті, велком и кнопку логаута.
