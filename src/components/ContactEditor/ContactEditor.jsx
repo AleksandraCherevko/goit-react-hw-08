@@ -19,9 +19,10 @@ export default function ContactEditor() {
   };
 
   return (
-    <form className={css.form} onSubmit={handleSubmit}>
-      <input name="text" className={css.input} />
-      <button type="submit" className={css.button}>
+    <form className={css.addContactForm} onSubmit={handleSubmit}>
+      Add contact
+      <input name="text" className={css.addContactInput} />
+      <button type="submit" className={css.addContactBtn}>
         Add contact
       </button>
     </form>

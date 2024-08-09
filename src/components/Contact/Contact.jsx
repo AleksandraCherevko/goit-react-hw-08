@@ -4,9 +4,9 @@ import css from "./Contact.module.css";
 export const Contact = ({ name, phoneNumber, id }) => {
   const dispatch = useDispatch();
 
-  // const handleDelete = () => {
-  //   dispatch(deleteContact(id));
-  // };
+  const handleDelete = () => {
+    dispatch(deleteContact(id));
+  };
 
   return (
     <div className={css.contactCard}>

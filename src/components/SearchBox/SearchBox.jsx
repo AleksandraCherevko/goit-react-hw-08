@@ -1,7 +1,6 @@
 import { useDispatch } from "react-redux";
 import css from "./SearchBox.module.css";
 import { useId } from "react";
-import { searchByName } from "../../redux/filters/filerSlice";
 
 export default function SearchBox() {
   const searchInput = useId();

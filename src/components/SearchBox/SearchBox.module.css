@@ -1,6 +1,7 @@
 .searchBoxLabel {
-  display: flex;
   flex-direction: column;
+  display: flex;
+  width: 100%;
   margin-bottom: 15px;
 }
 
@@ -11,6 +12,6 @@
   border-radius: 4px;
   padding: 10px;
   font-size: 1rem;
-  width: 93%;
+  width: 100%;
   margin-top: 5px;
 }
