@@ -1,12 +1,15 @@
 import { useDispatch } from "react-redux";
 import css from "./Contact.module.css";
+import { deleteContacts } from "../../redux/contacts/operations";
 
 export const Contact = ({ name, phoneNumber, id }) => {
   const dispatch = useDispatch();
 
-  const handleDelete = () => {
-    dispatch(deleteContact(id));
-  };
+  // const handleDelete = () => {
+  //   dispatch(deleteContacts(id));
+  // };
+
+  const handleDelete = () => dispatch(deleteContacts(id));
 
   return (
     <div className={css.contactCard}>

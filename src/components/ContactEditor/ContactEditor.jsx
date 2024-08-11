@@ -6,9 +6,9 @@ import { addContact } from "../../redux/contacts/operations";
 export default function ContactEditor() {
   const dispatch = useDispatch();
 
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    const form = e.currentTarget;
+  const handleSubmit = (event) => {
+    event.preventDefault();
+    const form = event.currentTarget;
     const text = form.elements.text.value;
     if (text !== "") {
       dispatch(addContact(text));
