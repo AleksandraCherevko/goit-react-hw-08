@@ -5,6 +5,10 @@ import axios from "axios";
 // addContact - додавання нового контакту (метод POST). Базовий тип екшену це рядок "contacts/addContact".
 // deleteContact - видалення контакту по ID (метод DELETE). Базовий тип екшену це рядок "contacts/deleteContact".
 
+axios.defaults.baseURL = "https://66ba4831fa763ff550fb6823.mockapi.io/";
+
+// const baseURL = "https://66b0a7e16a693a95b539a34d.mockapi.io/";
+
 export const fetchContacts = createAsyncThunk(
   "contacts/fetchAll",
   async (_, thunkAPI) => {
@@ -19,9 +23,9 @@ export const fetchContacts = createAsyncThunk(
 
 export const addContact = createAsyncThunk(
   "contacts/addContact",
-  async (contact, thunkAPI) => {
+  async (newContact, thunkAPI) => {
     try {
-      const response = await axios.post("/contacts", { contact });
+      const response = await axios.post("/contacts", newContact);
       return response.data;
     } catch (error) {
       return thunkAPI.rejectWithValue(error.message);
@@ -31,9 +35,9 @@ export const addContact = createAsyncThunk(
 
 export const deleteContact = createAsyncThunk(
   "contacts/deleteContact",
-  async (contactId, thunkAPI) => {
+  async (id, thunkAPI) => {
     try {
-      const response = await axios.delete(`/contacts/${contactId}`);
+      const response = await axios.delete(`/contacts/${id}`);
       return response.data;
     } catch (error) {
       return thunkAPI.rejectWithValue(error.message);

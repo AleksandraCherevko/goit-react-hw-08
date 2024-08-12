@@ -46,42 +46,36 @@ export default function RegistrationForm() {
       validationSchema={validationSchema}
       onSubmit={handleSubmit}
     >
-      {({ errors, touched, isValidating }) => (
-        <Form className={css.form} autoComplete="off">
-          <label className={css.label} htmlFor="name">
-            Username
-            <Field type="text" name="name" id="name" className={css.field} />
-            <ErrorMessage name="name" component="div" className={css.error} />
-          </label>
+      <Form className={css.form} autoComplete="off">
+        <label className={css.label} htmlFor="name">
+          Username
+          <Field type="text" name="name" id="name" className={css.field} />
+          <ErrorMessage name="name" component="div" className={css.error} />
+        </label>
 
-          <label className={css.label} htmlFor="email">
-            Email
-            <Field type="email" name="email" id="email" className={css.field} />
-            <ErrorMessage name="email" component="div" className={css.error} />
-          </label>
+        <label className={css.label} htmlFor="email">
+          Email
+          <Field type="email" name="email" id="email" className={css.field} />
+          <ErrorMessage name="email" component="div" className={css.error} />
+        </label>
 
-          <label className={css.label} htmlFor="password">
-            Password
-            <Field
-              type="password"
-              name="password"
-              id="password"
-              className={css.field}
-            />
-            <ErrorMessage
-              name="password"
-              component="div"
-              className={css.error}
-            />
-          </label>
+        <label className={css.label} htmlFor="password">
+          Password
+          <Field
+            type="password"
+            name="password"
+            id="password"
+            className={css.field}
+          />
+          <ErrorMessage name="password" component="div" className={css.error} />
+        </label>
 
-          <button type="submit" disabled={loading}>
-            {loading ? "Registering..." : "Register"}
-          </button>
+        <button type="submit" disabled={loading}>
+          {loading ? "Registering..." : "Register"}
+        </button>
 
-          {error && <div className={css.error}>{error}</div>}
-        </Form>
-      )}
+        {error && <div className={css.error}>{error}</div>}
+      </Form>
     </Formik>
   );
 }

@@ -1,14 +1,7 @@
-import PageTitle from "../../PageTitle/PageTitle";
-
 export default function HomePage() {
   return (
     <div>
-      <PageTitle>
-        Hello
-        <span role="img" aria-label="Greeting icon">
-          💁‍♀️
-        </span>
-      </PageTitle>
+      <h1>The main page</h1>
       <p>
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni
         asperiores eius nobis saepe quis voluptatibus facere expedita tempora,

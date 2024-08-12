@@ -8,6 +8,9 @@ import { addContact } from "../../redux/contacts/contactsOps";
 
 export default function ContactForm() {
   const dispatch = useDispatch();
+  const nameFieldId = useId();
+  const numberFieldId = useId();
+
   const handleSubmit = (values, actions) => {
     dispatch(addContact(values));
     actions.resetForm();
@@ -15,10 +18,13 @@ export default function ContactForm() {
 
   const loading = useSelector((state) => state.contacts.loading);
   const isError = useSelector((state) => state.contacts.error);
-  const formikInitialValue = { id: "", name: "", number: "" };
-  const id = useId();
-  const nameFieldId = id + "-name";
-  const phoneNumberFieldId = id + "-phoneNumber";
+  // const formikInitialValue = { id: "", name: "", number: "" };
+
+  const initialContact = {
+    name: "",
+    number: "",
+  };
+
   const validationSchema = Yup.object().shape({
     name: Yup.string()
       .min(3, "Too Short!")
@@ -32,54 +38,52 @@ export default function ContactForm() {
 
   return (
     <Formik
-      initialValues={formikInitialValue}
+      initialValues={initialContact}
       onSubmit={handleSubmit}
       validationSchema={validationSchema}
     >
-      {({ isValid, dirty }) => (
-        <Form className={css.contactForm}>
-          <label htmlFor={nameFieldId} className={css.label}>
-            Username
-          </label>
-          <Field
-            id={nameFieldId}
-            className={css.inputField}
-            type="text"
-            name="name"
-          />
-          {loading && <p>Loading..</p>}
-          {isError && (
-            <ErrorMessage
-              name="number"
-              component="span"
-              className={css.errorMessage}
-            />
-          )}
-          <label htmlFor={phoneNumberFieldId} className={css.label}>
-            Phone Number
-          </label>
-          <Field
-            id={phoneNumberFieldId}
-            className={css.inputField}
-            type="text"
+      <Form className={css.contactForm}>
+        <label htmlFor={nameFieldId} className={css.label}>
+          Username
+        </label>
+        <Field
+          id={nameFieldId}
+          className={css.inputField}
+          type="text"
+          name="name"
+        />
+        {loading && <p>Loading..</p>}
+        {isError && (
+          <ErrorMessage
             name="number"
+            component="span"
+            className={css.errorMessage}
           />
-          {loading && <p>Loading..</p>}
-          {isError && (
-            <ErrorMessage
-              name="number"
-              component="span"
-              className={css.errorMessage}
-            />
-          )}
-          <button
-            type="submit"
-            className={isValid && dirty ? "" : css.isDisabled}
-          >
-            Add contact
-          </button>
-        </Form>
-      )}
+        )}
+        <label htmlFor={numberFieldId} className={css.label}>
+          Phone Number
+        </label>
+        <Field
+          id={numberFieldId}
+          className={css.inputField}
+          type="text"
+          name="number"
+        />
+        {loading && <p>Loading..</p>}
+        {isError && (
+          <ErrorMessage
+            name="number"
+            component="span"
+            className={css.errorMessage}
+          />
+        )}
+        <button
+          type="submit"
+          className={isValid && dirty ? "" : css.isDisabled}
+        >
+          Add contact
+        </button>
+      </Form>
     </Formik>
   );
 }
