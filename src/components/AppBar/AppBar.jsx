@@ -19,4 +19,3 @@ export default function AppBar() {
     </header>
   );
 }
-// если залогинен, видно контакті, велком и кнопку логаута.
