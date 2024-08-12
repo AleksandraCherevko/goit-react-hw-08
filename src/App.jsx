@@ -9,14 +9,12 @@ import { DNA } from "react-loader-spinner";
 import RestrictedRoute from "./components/RestictedRoute";
 import PrivateRoute from "./components/PrivateRoute";
 
-const HomePage = lazy(() => import("./components/pages/HomePage/HomePage"));
+const HomePage = lazy(() => import("./pages/HomePage/HomePage"));
 const RegistrationPage = lazy(() =>
-  import("./components/pages/RegistrationPage/RegistrationPage")
+  import("./pages/RegistrationPage/RegistrationPage")
 );
-const LoginPage = lazy(() => import("./components/pages/LoginPage/LoginPage"));
-const ContactsPage = lazy(() =>
-  import("./components/pages/ContactsPage/ContactsPage")
-);
+const LoginPage = lazy(() => import("./pages/LoginPage/LoginPage"));
+const ContactsPage = lazy(() => import("./pages/ContactsPage/ContactsPage"));
 
 export default function App() {
   const dispatch = useDispatch();
