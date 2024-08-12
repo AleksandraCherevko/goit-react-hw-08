@@ -4,7 +4,7 @@ import css from "./ContactForm.module.css";
 import * as Yup from "yup";
 import { useDispatch } from "react-redux";
 import { useSelector } from "react-redux";
-import { addContact } from "../../redux/contacts/contactsOps";
+import { addContact } from "../../redux/contacts/operations";
 
 export default function ContactForm() {
   const dispatch = useDispatch();
@@ -77,10 +77,7 @@ export default function ContactForm() {
             className={css.errorMessage}
           />
         )}
-        <button
-          type="submit"
-          className={isValid && dirty ? "" : css.isDisabled}
-        >
+        <button type="submit" className={css.btn}>
           Add contact
         </button>
       </Form>

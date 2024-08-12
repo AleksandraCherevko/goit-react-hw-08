@@ -35,13 +35,13 @@ export default function App() {
       <Layout>
         <Suspense fallback={null}>
           <Routes>
-            <Route path="/" element={<HomePage />} />
+            <Route index={true} path="/" element={<HomePage />} />
             <Route
               path="/register"
               element={
                 <RestrictedRoute
                   component={<RegistrationPage />}
-                  redictTo="/contacts/"
+                  redictTo={"/contacts/"}
                 />
               }
             />
@@ -50,14 +50,17 @@ export default function App() {
               element={
                 <RestrictedRoute
                   component={<LoginPage />}
-                  redirectTo="/contacts/"
+                  redirectTo={"/contacts/"}
                 />
               }
             />
             <Route
               path="/contacts"
               element={
-                <PrivateRoute element={<ContactsPage />} redirectTo="/login" />
+                <PrivateRoute
+                  component={<ContactsPage />}
+                  redirectTo="/login"
+                />
               }
             />
           </Routes>
