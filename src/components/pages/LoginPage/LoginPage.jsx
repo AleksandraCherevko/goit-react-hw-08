@@ -1,10 +1,10 @@
 import LoginForm from "../../LoginForm/LoginForm";
-import PageTitle from "../../PageTitle/PageTitle";
+import css from "./LoginPage.module.css";
 
 export default function LoginPage() {
   return (
     <div>
-      <PageTitle>Please log in</PageTitle>
+      <h1 className={css.loginTitle}>Please Log in</h1>
       <LoginForm />
     </div>
   );

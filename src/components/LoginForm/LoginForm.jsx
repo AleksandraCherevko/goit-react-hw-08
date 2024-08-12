@@ -5,14 +5,6 @@ import css from "./LoginForm.module.css";
 
 import { useLocation, useNavigate } from "react-router-dom";
 
-// const validationSchema = Yup.object().shape({
-//   email: Yup.string().email("Invalid email address").required("Required"),
-//   password: Yup.string()
-//     .min(6, "Password too short!")
-//     .max(50, "Password too long!")
-//     .required("Required!"),
-// });
-
 export default function LoginForm() {
   const dispatch = useDispatch();
 
@@ -34,7 +26,7 @@ export default function LoginForm() {
         email: "",
         password: "",
       }}
-      // validationSchema={validationSchema}
+  
       onSubmit={handleSubmit}
     >
       <Form className={css.form} autoComplete="off">

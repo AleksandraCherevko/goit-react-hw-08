@@ -1,7 +1,8 @@
+import css from "./HomePage.module.css";
 export default function HomePage() {
   return (
     <div>
-      <h1>The main page</h1>
+      <h1 className={css.theMainTitle}>The main page</h1>
       <p>
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni
         asperiores eius nobis saepe quis voluptatibus facere expedita tempora,

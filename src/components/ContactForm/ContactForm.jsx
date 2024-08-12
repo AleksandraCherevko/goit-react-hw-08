@@ -18,7 +18,7 @@ export default function ContactForm() {
 
   const loading = useSelector((state) => state.contacts.loading);
   const isError = useSelector((state) => state.contacts.error);
-  // const formikInitialValue = { id: "", name: "", number: "" };
+
 
   const initialContact = {
     name: "",
