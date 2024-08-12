@@ -6,6 +6,8 @@ import { useDispatch, useSelector } from "react-redux";
 import { refreshUser } from "./redux/auth/operations";
 import { selectIsRefreshing } from "./redux/auth/selectors";
 import { DNA } from "react-loader-spinner";
+import RestrictedRoute from "./components/RestictedRoute";
+import PrivateRoute from "./components/PrivateRoute";
 
 const HomePage = lazy(() => import("./components/pages/HomePage/HomePage"));
 const RegistrationPage = lazy(() =>
@@ -34,9 +36,30 @@ export default function App() {
         <Suspense fallback={null}>
           <Routes>
             <Route path="/" element={<HomePage />} />
-            <Route path="/register" element={<RegistrationPage />} />
-            <Route path="/login" element={<LoginPage />} />
-            <Route path="/contacts" element={<ContactsPage />} />
+            <Route
+              path="/register"
+              element={
+                <RestrictedRoute
+                  component={<RegistrationPage />}
+                  redictTo="/contacts/"
+                />
+              }
+            />
+            <Route
+              path="/login"
+              element={
+                <RestrictedRoute
+                  component={<LoginPage />}
+                  redirectTo="/contacts/"
+                />
+              }
+            />
+            <Route
+              path="/contacts"
+              element={
+                <PrivateRoute element={<ContactsPage />} redirectTo="/login" />
+              }
+            />
           </Routes>
         </Suspense>
       </Layout>

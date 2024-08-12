@@ -1,6 +1,6 @@
 import { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import PageTitle from "../../PageTitle/PageTitle";
+
 import ContactList from "../../ContactList/ContactList";
 import ContactEditor from "../../ContactEditor/ContactEditor";
 import { fetchContact } from "../../../redux/contacts/operations";
@@ -16,7 +16,7 @@ export default function ContactsPage() {
 
   return (
     <>
-      <PageTitle>Your tasks</PageTitle>
+      <h1>Your contacts</h1>
 
       <ContactEditor />
       <div>{isLoading && "Request in progress..."}</div>
